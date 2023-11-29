@@ -1,0 +1,96 @@
+version: '3.7'
+services:
+  microservicio:
+    container_name: microservicio
+    image: microservicio:v1
+    build:
+      context: .
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  microservicio 2:
+    container_name: microservicio 2
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+      
+  microservicio 3:
+    container_name: microservicio 3
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  microservicio 4:
+    container_name: microservicio 4
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  microservicio 5:
+    container_name: microservicio 5
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  microservicio 6:
+    container_name: microservicio 6
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  microservicio 7:
+    container_name: microservicio 7
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  microservicio 8:
+    container_name: microservicio 8
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  microservicio 9:
+    container_name: microservicio 9
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  microservicio 10:
+    container_name: microservicio 10
+    image: microservicio:v1
+    ports:
+      - "4002"
+    networks:
+      - app-network
+
+  loader-balancer:
+    container_name : loader-balancer
+    image: loader-balancer:v1
+    build :
+      context : ./loader-balancer
+    ports:
+      - "4003:80"
+    networks : 
+      - proyectos-app
+
+networks:
+  app-network:
